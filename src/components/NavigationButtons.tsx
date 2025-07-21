@@ -324,7 +324,7 @@ const NavigationButtons: React.FC<NavigationButtonsProps> = ({ onNavigate }) => 
         >
           <div>
             <strong>Want to understand this image?</strong><br />
-            This website is designed based on how a linear ion trap would look, with metal electrodes and the buttons are the trapped ions.
+            This website is designed based on how a linear ion trap would look. The rectangles are metal electrodes and the buttons are the trapped ions.
           </div>
           <TooltipArrow />
         </InfoTooltip>
