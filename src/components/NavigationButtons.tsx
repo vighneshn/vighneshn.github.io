@@ -323,7 +323,7 @@ const NavigationButtons: React.FC<NavigationButtonsProps> = ({ onNavigate }) => 
           transition={{ duration: 0.3 }}
         >
           <div>
-            <strong>Want to understand this image?</strong><br />
+            <strong>What is this background?</strong><br />
             This website is designed based on how a linear ion trap would look. The rectangles are metal electrodes and the buttons are the trapped ions.
           </div>
           <TooltipArrow />
