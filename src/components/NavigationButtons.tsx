@@ -124,6 +124,78 @@ const TrapButtonContent = styled.div`
   }
 `;
 
+const InfoButton = styled(motion.button)`
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 30;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: rgba(0, 0, 0, 0.5);
+    border-color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 1);
+  }
+  
+  @media (max-width: 768px) {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+    bottom: 15px;
+    right: 15px;
+  }
+`;
+
+const InfoTooltip = styled(motion.div)`
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  max-width: 300px;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.4;
+  z-index: 30;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  
+  @media (max-width: 768px) {
+    max-width: 250px;
+    bottom: 60px;
+    right: 15px;
+    font-size: 13px;
+    padding: 12px;
+  }
+`;
+
+const TooltipArrow = styled.div`
+  position: absolute;
+  bottom: -8px;
+  right: 20px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid rgba(0, 0, 0, 0.9);
+  
+  @media (max-width: 768px) {
+    right: 15px;
+  }
+`;
+
 const navigationItems = [
   { name: 'About', label: 'About' },
   { name: 'Projects', label: 'Projects' },
@@ -173,6 +245,7 @@ const getTrapPositions = (width: number) => {
 
 const NavigationButtons: React.FC<NavigationButtonsProps> = ({ onNavigate }) => {
   const [trapPositions, setTrapPositions] = useState(getTrapPositions(window.innerWidth));
+  const [showInfo, setShowInfo] = useState(false);
   
   useEffect(() => {
     const handleResize = () => {
@@ -228,6 +301,34 @@ const NavigationButtons: React.FC<NavigationButtonsProps> = ({ onNavigate }) => 
           ))}
         </IonsContainer>
       </ContentContainer>
+      
+      {/* Info button */}
+      <InfoButton
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 1.5, duration: 0.5 }}
+        onClick={() => setShowInfo(!showInfo)}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        i
+      </InfoButton>
+      
+      {/* Info tooltip */}
+      {showInfo && (
+        <InfoTooltip
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 10 }}
+          transition={{ duration: 0.3 }}
+        >
+          <div>
+            <strong>Want to understand this image?</strong><br />
+            This website is designed based on how a linear ion trap would look, with metal electrodes and the buttons are the trapped ions.
+          </div>
+          <TooltipArrow />
+        </InfoTooltip>
+      )}
     </Container>
   );
 };
