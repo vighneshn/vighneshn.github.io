@@ -128,13 +128,13 @@ const InfoButton = styled(motion.button)`
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.3);
   border: 2px solid rgba(255, 255, 255, 0.5);
   color: rgba(255, 255, 255, 0.8);
-  font-size: 18px;
+  font-size: 22px;
   font-weight: bold;
   cursor: pointer;
   z-index: 30;
