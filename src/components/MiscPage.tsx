@@ -217,10 +217,7 @@ const MiscPage: React.FC = () => {
             <p>
               Explore:
               <ul>
-                <li>The mathematical principles behind paper folding</li>
-                <li>Modern applications in engineering and medical devices</li>
-                <li>The cultural significance and evolution of origami</li>
-                <li>How origami inspires innovation in space technology</li>
+                <li>My origami projects</li>
               </ul>
             </p>
             <ViewMoreButton 

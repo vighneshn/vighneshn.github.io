@@ -160,9 +160,9 @@ const projectsData: Record<string, ProjectData> = {
       'A design, simulation and measurement of a fabricated grating coupler',
     ],
     images: [
-      '/images/fluorescence-1.pdf', 
+      '/images/fluorescence-1.png', 
       '/images/fluorescence-2.png',
-      '/images/fluorescence-3.pdf'
+      '/images/fluorescence-3.png'
     ]
   },
   'artiq-control': {
@@ -204,8 +204,7 @@ const projectsData: Record<string, ProjectData> = {
     ],
     images: [
       '/images/photonics-1.png', 
-      '/images/photonics-2.png',
-      '/images/photonics-3.jpg'
+      '/images/photonics-2.png'
     ]
   },
   'circular-polarization': {
@@ -225,13 +224,11 @@ const projectsData: Record<string, ProjectData> = {
     `,
     achievements: [
       'Implementation of efficient circular polarization generation',
-      'Integration with existing optical systems',
-      'Demonstration of high-fidelity polarization control'
     ],
     images: [
-      '/images/polarization-1.jpg', 
-      '/images/polarization-2.jpg',
-      '/images/polarization-3.jpg'
+      '/images/polarization-1.png', 
+      '/images/polarization-2.png',
+      '/images/polarization-3.png'
     ]
   }
 };

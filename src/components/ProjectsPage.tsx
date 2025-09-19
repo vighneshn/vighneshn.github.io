@@ -158,10 +158,9 @@ const ProjectsPage: React.FC = () => {
             <p>
               Key achievements include:
               <ul>
-                <li>Implementation of integrated optical waveguides for efficient light collection</li>
-                <li>Development of novel optical designs for enhanced collection efficiency</li>
-                <li>Integration with existing ion trap architectures</li>
-                <li>Demonstration of improved signal-to-noise ratios in fluorescence detection</li>
+                <li>A derivation of the collection efficiency of integrated grating couplers</li>
+                <li>A target metric to optimize for the collection of fluorescence from an ion</li>
+                <li>A design, simulation and measurement of a fabricated grating coupler</li>
               </ul>
             </p>
             <ViewMoreButton 
@@ -187,8 +186,6 @@ const ProjectsPage: React.FC = () => {
               <ul>
                 <li>Development of custom control sequences for complex quantum operations</li>
                 <li>Implementation of real-time feedback and control systems</li>
-                <li>Optimization of timing and synchronization for multi-ion operations</li>
-                <li>Integration with existing experimental infrastructure</li>
               </ul>
             </p>
             <ViewMoreButton 
@@ -212,9 +209,8 @@ const ProjectsPage: React.FC = () => {
             <p>
               Key features:
               <ul>
-                <li>Development of standardized design patterns for ion trap photonics</li>
-                <li>Integration of optical components with ion trap electrodes</li>
-                <li>Optimization of optical access and collection efficiency</li>
+                <li>Development of a code base for ion trap photonics</li>
+                <li>Implementation of a general framework for grating design and simulation</li>
                 <li>Creation of a public framework for community adoption</li>
               </ul>
             </p>
@@ -239,10 +235,7 @@ const ProjectsPage: React.FC = () => {
             <p>
               Technical achievements:
               <ul>
-                <li>Development of integrated polarization control elements</li>
                 <li>Implementation of efficient circular polarization generation</li>
-                <li>Integration with existing optical systems</li>
-                <li>Demonstration of high-fidelity polarization control</li>
               </ul>
             </p>
             <ViewMoreButton 
