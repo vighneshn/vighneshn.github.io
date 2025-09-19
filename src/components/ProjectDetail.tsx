@@ -160,31 +160,21 @@ const projectsData: Record<string, ProjectData> = {
       'A design, simulation and measurement of a fabricated grating coupler',
     ],
     images: [
-      '/images/fluorescence-1.jpg', 
-      '/images/fluorescence-2.jpg',
-      '/images/fluorescence-3.jpg'
+      '/images/fluorescence-1.pdf', 
+      '/images/fluorescence-2.png',
+      '/images/fluorescence-3.pdf'
     ]
   },
   'artiq-control': {
     title: 'Precise Control of Trapped Ion Experiments using ARTIQ',
     description: `
-      The ARTIQ (Advanced Real-Time Infrastructure for Quantum physics) control system represents a significant 
-      advancement in the control of trapped ion experiments. Our work focuses on implementing and optimizing 
-      this system for precise timing and control of complex quantum operations.
-      
-      I've developed custom control sequences that enable sophisticated quantum operations while maintaining 
-      precise timing and synchronization. The system's real-time capabilities allow for immediate feedback and 
-      control, essential for maintaining quantum coherence and performing complex quantum algorithms.
-      
-      Our implementation includes optimization of timing and synchronization for multi-ion operations, 
-      integration with existing experimental infrastructure, and development of custom control sequences 
-      for specific quantum operations.
+      We use ARTIQ (Advanced Real-Time Infrastructure for Quantum physics) control system in our lab for our trapped ion experiments. I have setup our control system with the philosophy of
+      easy to use and modular code that anyone in my lab can build on. With this, we are able to run complex experiments towards our first demonstrations of fast ground state cooling of calcium ions.
+      All inference is real time, and users have complete flexibility to scan any parameter for spectroscopies and rabi experiments. 
     `,
     achievements: [
-      'Development of custom control sequences for complex quantum operations',
-      'Implementation of real-time feedback and control systems',
-      'Optimization of timing and synchronization for multi-ion operations',
-      'Integration with existing experimental infrastructure'
+      'Development of custom control sequences for complex quantum operations',    
+      'Implementation of real-time feedback and control systems', 
     ],
     images: [
       '/images/artiq-1.jpg', 
@@ -200,24 +190,21 @@ const projectsData: Record<string, ProjectData> = {
       shared with the broader quantum computing community, facilitating the development of next-generation 
       ion trap quantum computers.
       
-      The framework includes standardized design patterns for ion trap photonics, integration of optical 
-      components with ion trap electrodes, and optimization of optical access and collection efficiency. 
-      By creating a public framework, we aim to accelerate progress in the field and enable more researchers 
-      to develop advanced ion trap systems with integrated photonics.
-      
-      This work represents a significant step toward scalable quantum computing with trapped ions, as it 
-      addresses one of the key challenges in the field: the integration of optical components with ion trap 
-      electrodes in a scalable and manufacturable way.
+      The code base implements ideas from the paper <a href="https://ieeexplore.ieee.org/abstract/document/10479983" target="_blank" rel="noopener noreferrer">Grating Design Methodology for Tailored Free-Space Beam-Forming</a>.
+      Here, I have repositories for creating gratings for a material stack, and also for simulating the designed gratings efficiently using tidy3d. The code is written such that all inputs are defined in json files.
+      Once the parameters for the material stack, grating parameters, simulation configurations are decided, the process to design gratings is a few command line calls. The code generates the requisite plots and figures
+      that help understand the simulation/design setup and results, with information on the beam profile at the ion location, power efficiency, power in higher order lobes, etc.
+
+      My goal is for this to be a useful tool for the community to design and simulate gratings for ion trap photonics. The repositories will be published on github.
     `,
     achievements: [
-      'Development of standardized design patterns for ion trap photonics',
-      'Integration of optical components with ion trap electrodes',
-      'Optimization of optical access and collection efficiency',
+      'Development of a code base for ion trap photonics',
+      'Implementation of a general framework for grating design and simulation',
       'Creation of a public framework for community adoption'
     ],
     images: [
-      '/images/photonics-1.jpg', 
-      '/images/photonics-2.jpg',
+      '/images/photonics-1.png', 
+      '/images/photonics-2.png',
       '/images/photonics-3.jpg'
     ]
   },
@@ -225,20 +212,18 @@ const projectsData: Record<string, ProjectData> = {
     title: 'Integrated Circular Polarization Emitters',
     description: `
       Our research in integrated circular polarization emitters focuses on developing compact and efficient 
-      solutions for polarization control in quantum experiments. By integrating polarization control elements 
-      directly into the optical system, we've created a more robust and efficient approach to generating 
-      and controlling circularly polarized light in trapped ion systems.
+      solutions for polarization control in quantum experiments. 
+
+      Leveraging an asymmetric perturbation of the waveguide, we can emit out light from one side of a waveguide. In high index contrast waveguides, tight confinement at the edges
+      of the waveguide results in a comparable longitudinal electric field vs transverse electric field. These two fields have an intrinsic pi/2 phase shift between them. Emitting 
+      light out from one side thus results in high purity circular polarization. This method is robust to index fluctuations and small inaccuracies in the waveguide geometry.
       
-      The project combines expertise in integrated photonics, polarization optics, and quantum control to 
-      develop novel solutions for polarization control. Our approach focuses on creating integrated components 
-      that can generate and control circular polarization with high fidelity, while maintaining compatibility 
-      with existing optical systems.
-      
+      We have designed and measured these grating arrays in silicon nitride and hafnium aluminum oxide, with purities on the order of 99%.
+
       This work has important applications in quantum computing and quantum sensing, where precise control 
       of light polarization is essential for many quantum operations.
     `,
     achievements: [
-      'Development of integrated polarization control elements',
       'Implementation of efficient circular polarization generation',
       'Integration with existing optical systems',
       'Demonstration of high-fidelity polarization control'
