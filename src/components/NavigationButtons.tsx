@@ -39,6 +39,7 @@ const ContentContainer = styled.div`
   pointer-events: none; /* This ensures clicks pass through to the TrapBackground */
 `;
 
+
 // Ions container positions all ions exactly in the center
 const IonsContainer = styled.div`
   position: relative;
